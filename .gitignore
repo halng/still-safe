@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+dist/
+web-build/
+server/data/
+*.log
+.DS_Store
+agent-tools/

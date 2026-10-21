@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Circle",
+    "slug": "circle",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFFFF",
+    "scheme": "circle",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.circle.safety",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Circle shares your precise location with the supervisors you invite.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Circle keeps sharing your location with your supervisors while the app is in the background.",
+        "NSCameraUsageDescription": "Circle uses the camera to photograph your ID.",
+        "NSPhotoLibraryUsageDescription": "Circle uses a photo of your ID to record that you are over 16."
+      }
+    },
+    "android": {
+      "package": "app.circle.safety",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "CAMERA",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Circle shares your precise location with the supervisors you invite.",
+          "locationAlwaysAndWhenInUsePermission": "Circle keeps sharing your location with your supervisors while the app is in the background.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Circle uses a photo of your ID to record that you are over 16.",
+          "cameraPermission": "Circle uses the camera to photograph your ID."
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
